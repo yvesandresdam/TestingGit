@@ -13,6 +13,12 @@ public class Main {
         Student s = new Student();
         s = firstPlayer.fromJson(json, Student.class);
         System.out.println(s.name);
+
+        String path = "./jsonTXT.json";
+        String jsonFile = Utils.getJSON(path);
+
+        s = firstPlayer.fromJson(jsonFile, Student.class);
+        System.out.println(s.name);
     }
 }
 
